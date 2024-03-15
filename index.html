@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Project | CarrotUserBr</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- Fonts -->
+        <!-- Nunito Sans -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+        <!-- Inter -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <div class="front__card card">
+            <div class="brand">
+                <img src="./assets/images/Icon.svg" alt="">
+            </div>
+            <div class="card__number">
+                XXXX-XXXX-XXXX-XXXX
+            </div>
+            <div class="cardholder__and__data__expires">
+                <div class="cardholder">
+                    <h3>Cardholder</h3>
+                    <p>XXXX XXXX</p>
+                </div>
+                <div class="data__expires">
+                    <h3>Expires</h3>
+                    <p>XX/XX</p>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <h1>Digite os dados do seu cartão</h1>
+            <div class="field__container">
+                <label for="cardNumber">Número do cartão</label>
+                <input type="number" id="cardNumber" name="cardNumber">
+            </div>    
+            <div class="field__container">
+                <label for="cardHolder">Nome impresso no cartão</label>
+                <input type="text" id="cardHolder" name="cardHolder">
+            </div>
+            <div class="field__container select">
+                <label for="expires">Validade</label>
+                <fieldset>
+                <select name="mounth" id="mounthExpires">
+                    <option value="">mm</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="year" id="yearExpires">
+                    <option value="">yy</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+            </fieldset>
+            </div>
+            <div class="field__container">
+                <label for="cvv">Código de verificação</label>
+                <input type="number" id="cvv">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

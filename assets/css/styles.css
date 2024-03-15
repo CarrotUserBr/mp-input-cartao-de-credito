@@ -1,0 +1,107 @@
+:root {
+    --bg-color: #1f2937;
+    --section-bg-color: #f3f4f6;
+    --card-bg-color: linear-gradient(270deg,#030712 40%, #595959 230%);
+    
+    --light-text-color: #f9fafb;
+    --dark-text-color: #101010;
+    --input-bg-color: #f9fafb
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 1.5rem 1rem;
+    background-color: var(--bg-color);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4.125rem 2.5rem;
+    background: var(--section-bg-color);
+    border-radius: 1.25rem;
+    gap: 1.5rem;
+}
+
+.card {
+    height: 176px;
+    padding: 1rem;
+    background: var(--card-bg-color);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--light-text-color);
+    font-family:"Nunito Sans", sans-serif;
+}
+
+.brand {
+    place-self: end;
+    font-size: 1.5rem;
+}
+
+.card__number {
+    padding: .275rem 1rem;
+    place-self: center;
+    font-size: 1rem;
+    border: 1px solid #507FFA;
+    border-radius: .5rem;
+}
+
+.cardholder__and__data__expires {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    text-align: center;
+}
+
+.form {
+    font-family: "Inter", sans-serif;
+    color: var(--dark-text-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+}
+
+.form h1 {
+    font-size: 1.125rem;
+}
+
+.field__container {
+    height: 4rem;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.field__container input,
+.field__container select{
+    width: 100%;
+    height: 3rem;
+    border-radius: .375rem;
+    border: 1px solid #D3D3D3;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+}
+
+.select fieldset {
+    border: none;
+    height: 100%;
+    display: flex;
+    gap: .3125rem;
+}
+
