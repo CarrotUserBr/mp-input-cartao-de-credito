@@ -28,14 +28,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4.125rem 2.5rem;
+    align-items: center;
     background: var(--section-bg-color);
     border-radius: 1.25rem;
     gap: 1.5rem;
 }
 
 .card {
-    height: 176px;
+    width: 100%;
+    max-width: 280px;
     padding: 1rem;
     background: var(--card-bg-color);
     border-radius: 1rem;
@@ -44,6 +45,7 @@ body {
     justify-content: space-between;
     color: var(--light-text-color);
     font-family:"Nunito Sans", sans-serif;
+    gap: 1.75rem;
 }
 
 .brand {
@@ -67,6 +69,7 @@ body {
 }
 
 .form {
+    max-width: 280px;
     font-family: "Inter", sans-serif;
     color: var(--dark-text-color);
     padding: 1rem;
@@ -105,3 +108,25 @@ body {
     gap: .3125rem;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+@media (min-width: 767px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        width: auto;
+        height: auto;
+        padding: 4.125rem 2.5rem;
+        flex-direction: row;
+        gap: 6.25rem;
+    }
+}
