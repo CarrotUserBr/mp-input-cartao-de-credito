@@ -26,16 +26,16 @@
                 <img src="./assets/images/Icon.svg" alt="">
             </div>
             <div class="card__number">
-                XXXX-XXXX-XXXX-XXXX
+                <p id="cardNumberText">XXXX-XXXX-XXXX-XXXX</p>
             </div>
             <div class="cardholder__and__data__expires">
                 <div class="cardholder">
                     <h3>Cardholder</h3>
-                    <p>XXXX XXXX</p>
+                    <p id="cardHolderText">XXXX XXXX</p>
                 </div>
                 <div class="data__expires">
                     <h3>Expires</h3>
-                    <p>XX/XX</p>
+                    <p class="expires"><span id="mounthExpiresText">XX</span>/<span id="yearExpiresText">XX</span></p>
                 </div>
             </div>
         </div>
@@ -43,11 +43,11 @@
             <h1>Digite os dados do seu cartão</h1>
             <div class="field__container">
                 <label for="cardNumber">Número do cartão</label>
-                <input type="number" id="cardNumber" name="cardNumber">
+                <input type="text" id="cardNumber" name="cardNumber" inputmode="numeric" maxlength="19"  >
             </div>    
             <div class="field__container">
                 <label for="cardHolder">Nome impresso no cartão</label>
-                <input type="text" id="cardHolder" name="cardHolder">
+                <input type="text" id="cardHolder" name="cardHolder" maxlength="20">
             </div>
             <div class="field__container select">
                 <label for="expires">Validade</label>
@@ -96,5 +96,7 @@
             </div>
         </div>
     </section>
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
