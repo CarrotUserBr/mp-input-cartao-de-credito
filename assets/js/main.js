@@ -6,7 +6,9 @@ const mounthExpires = document.getElementById("mounthExpires")
 const mounthExpiresText = document.getElementById("mounthExpiresText")
 const yearExpires = document.getElementById("yearExpires")
 const yearExpiresText = document.getElementById("yearExpiresText")
-
+const frontCard = document.querySelector(".front__card")
+const backCard = document.querySelector(".back__card")
+const cardContainer = document.querySelector(".card")
 
 cardNumber.addEventListener("input", function(event) {
     let cardNumberValue = event.target.value.replace(/\D/g, '');
@@ -26,7 +28,6 @@ cardNumber.addEventListener("input", function(event) {
 
 cardHolder.addEventListener("input", function() {
     let cardHolderValue = cardHolder.value
-
     cardHolderText.innerHTML = cardHolderValue
 })
 
@@ -40,3 +41,23 @@ yearExpires.addEventListener("change", function (event) {
 
     yearExpiresText.innerHTML = event.target.value
 })
+
+function rotateCard() {
+    cardContainer.style.animation = 'rotate-card 1s'
+    let storageCardPosition = frontCard.style.display === 'flex' ? "frontCard" : "backCard"
+    frontCard.style.display = 'none'
+    backCard.style.display = 'none'
+    setTimeout(() => {
+        if (storageCardPosition === 'frontCard') {
+            
+            backCard.style.display = 'flex'
+        } else {          
+            frontCard.style.display = 'flex'
+        }
+    }, 200)
+    setTimeout(() => {
+        cardContainer.style.animation = 'none'
+}, 500)
+}
+
+cardContainer.addEventListener("click", rotateCard)
