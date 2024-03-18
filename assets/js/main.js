@@ -10,6 +10,8 @@ const frontCard = document.querySelector(".front__card")
 const backCard = document.querySelector(".back__card")
 const cardContainer = document.querySelector(".card")
 
+frontCard.style.display = 'flex'
+
 cardNumber.addEventListener("input", function(event) {
     let cardNumberValue = event.target.value.replace(/\D/g, '');
     let formattedValue = ''
@@ -42,14 +44,16 @@ yearExpires.addEventListener("change", function (event) {
     yearExpiresText.innerHTML = event.target.value
 })
 
+cvv
+
 function rotateCard() {
-    cardContainer.style.animation = 'rotate-card 1s'
+    cardContainer.style.animation = 'rotate-card .5s ease'
     let storageCardPosition = frontCard.style.display === 'flex' ? "frontCard" : "backCard"
+    console.log(storageCardPosition)
     frontCard.style.display = 'none'
     backCard.style.display = 'none'
     setTimeout(() => {
         if (storageCardPosition === 'frontCard') {
-            
             backCard.style.display = 'flex'
         } else {          
             frontCard.style.display = 'flex'
@@ -57,7 +61,8 @@ function rotateCard() {
     }, 200)
     setTimeout(() => {
         cardContainer.style.animation = 'none'
-}, 500)
+    }, 490)
 }
 
 cardContainer.addEventListener("click", rotateCard)
+
