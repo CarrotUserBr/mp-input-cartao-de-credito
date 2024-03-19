@@ -7,6 +7,11 @@ const backCard = document.querySelector(".back__card")
 const cardContainer = document.querySelector(".card")
 const cvv = document.getElementById("cvv")
 
+const cardNumberText = document.getElementById("cardNumberText")
+const cardHolderText = document.getElementById("cardHolderText")
+const mounthExpiresText = document.getElementById("mounthExpiresText")
+const yearExpiresText = document.getElementById("yearExpiresText")
+const cvvText = document.getElementById("cvvText")
 
 frontCard.style.display = 'flex'
 
@@ -23,29 +28,25 @@ cardNumber.addEventListener("input", function(event) {
 
     event.target.value = formattedValue
 
-    document.getElementById("cardNumberText").innerHTML = event.target.value
+    event.target.value == '' ? cardNumberText.innerHTML = "XXXX-XXXX-XXXX-XXXX" : cardNumberText.innerHTML = event.target.value
 });
 
-cardHolder.addEventListener("input", function() {
-    let cardHolderValue = cardHolder.value
-    document.getElementById("cardHolderText").innerHTML = cardHolderValue
+cardHolder.addEventListener("input", function(event) {
+    event.target.value == '' ? cardHolderText.innerHTML = "XXXX XXXX" : cardHolderText.innerHTML = event.target.value
 })
 
 mounthExpires.addEventListener("change", function (event) {
-    let mounthExpiresValue = mounthExpires.value
-
-    document.getElementById("mounthExpiresText").innerHTML = mounthExpiresValue
+    event.target.value == '' ? mounthExpiresText.innerHTML = 'XX' : mounthExpiresText.innerHTML = event.target.value
 })
 
 yearExpires.addEventListener("change", function (event) {
-
-    document.getElementById("yearExpiresText").innerHTML = event.target.value
+    event.target.value == '' ? yearExpiresText.innerHTML = 'XX' : yearExpiresText.innerHTML = event.target.value
 })
 
 cvv.addEventListener("input", function(event) {
-    let cvvValue = event.target.value.replace(/\D/g, '');
-    event.target.value = cvvValue
-    document.getElementById('cvvText').innerHTML = cvvValue
+    event.target.value = event.target.value.replace(/\D/g, '');
+
+    event.target.value == '' ? cvvText.innerHTML = 'XXX' : cvvText.innerHTML = event.target.value
 })
 
 function rotateCard() {
